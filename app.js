@@ -7,8 +7,8 @@ const feedback = document.getElementById("feedback");
 const mensagemFinal = document.getElementById("mensagemFinal");
 
 // Pergunta e resposta do jogo
-const perguntaTexto = "Qual é o resultado de 2 + 2?";
-const respostaCorreta = "4";
+const perguntaTexto = "Qual é a capital do Brasil";
+const respostaCorreta = "Brasília";
 
 // Quando clicar no botão inicial
 botao.addEventListener("click", () => {
