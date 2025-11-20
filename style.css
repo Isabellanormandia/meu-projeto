@@ -1,12 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
-    background-color: #f1f1f1;
+    background-color: #e19bff;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #2f45a9;
     color: white;
     border: none;
     cursor: pointer;
@@ -14,7 +14,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #f3f2fd;
 }
 
 .hidden {
@@ -30,5 +30,9 @@ button:hover {
     font-size: 32px;
     font-weight: bold;
     text-align: center;
+}
+
+.hidden {
+    display: none;
 }
 

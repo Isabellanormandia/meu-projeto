@@ -1,11 +1,33 @@
 const botao = document.getElementById("botao");
-const conteudo = document.getElementById("conteudo");
+const jogo = document.getElementById("jogo");
+const pergunta = document.getElementById("pergunta");
+const respostaInput = document.getElementById("resposta");
+const enviarResposta = document.getElementById("enviarResposta");
+const feedback = document.getElementById("feedback");
 const mensagemFinal = document.getElementById("mensagemFinal");
 
-botao.addEventListener("click", function() {
-    // Some com o conteúdo
-    conteudo.style.display = "none";
+// Pergunta e resposta do jogo
+const perguntaTexto = "Qual é o resultado de 2 + 2?";
+const respostaCorreta = "4";
 
-    // Mostra a frase centralizada
-    mensagemFinal.classList.remove("hidden");
+// Quando clicar no botão inicial
+botao.addEventListener("click", () => {
+    botao.classList.add("hidden");
+    jogo.classList.remove("hidden");
+});
+
+// Verificar resposta
+enviarResposta.addEventListener("click", () => {
+    const respostaUsuario = respostaInput.value.trim();
+
+    if (respostaUsuario === respostaCorreta) {
+        // Acertou
+        jogo.classList.add("hidden");
+        mensagemFinal.classList.remove("hidden");
+    } else {
+        // Errou
+        feedback.textContent = "Tente novamente!";
+        feedback.style.color = "red";
+        respostaInput.value = "";
+    }
 });
